@@ -49,12 +49,13 @@ print "$white        [ =========================================================
   [$red 5 $white] GeoIP Lookup
   [$red 6 $white] Port Scan
   [$red 7 $white] Reverse IP Lookup
-  echo "pilihan => "; $cakil=trim(fgets(STDIN));
+    [$red 99 $white] exit\n";
+echo "pilihan => "; $cakil=trim(fgets(STDIN));
 if($cakil=="1"){
 	echo "masukan ip or domain : "; $whois=trim(fgets(STDIN));
 	@system("curl http://api.hackertarget.com/whois/?q=$whois");
 	echo "done\n";
-   elseif($cakil=="1"){
+elseif($cakil=="2"){
 echo "Please wait Mastah :) ";
 @system("cd smspamming ; php spamming.php ");
 }
